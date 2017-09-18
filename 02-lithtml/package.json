@@ -1,0 +1,15 @@
+{
+  "name": "polymer3-example",
+  "version": "1.0.0",
+  "description": "A simple Polymer 3 example using lit-html.",
+  "main": "index.html",
+  "author": "@liamfiddler",
+  "license": "BSD 3-Clause",
+  "private": true,
+  "flat": true,
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0-pre.1",
+    "@webcomponents/webcomponentsjs": "^1.0.11",
+    "lit-html": "PolymerLabs/lit-html"
+  }
+}
