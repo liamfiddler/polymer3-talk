@@ -12,12 +12,24 @@ polymer serve --npm
 ## How it was made
 
 The project directory was initialised using
-[Furbish](https://github.com/MentallyFriendly/furbish)
+[Furbish](https://github.com/MentallyFriendly/furbish). At a
+high level Furbish does the following:
 
-Then a style tag was added to the `template` method
-of `src/my-app.js`.
+- Initialises the project using [Yarn](https://yarnpkg.com)
+- Sets the `flat: true` in `package.json`
+- Installs the project dependencies (`polymer@next` and
+  `@webcomponents/webcomponentsjs`)
+- Creates a skeleton for the project (`index.html` and
+  `src/my-app.js`)
 
-Then 
+Then the `date` property was added in the `properties()`
+method of `src/my-app.js`
+
+Then an interval was defined that updates the `date` property
+every two seconds in the `constructor()`.
+
+Finally the `template()` method was updated to include some
+styles and output the value of date.
 
 ## Changes from Polymer 2.x
 
