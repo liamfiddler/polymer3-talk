@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="my-app">
+    <template>
+        <style> div { color: black; } </style>
+        <h1> 00 - Polymer 2 </h1>
+        <div> The time is [[date]] </div>
+    </template>
+    <script>
+        class MyApp extends Polymer.Element {
+            static get is() {
+                return 'my-app';
+            }
+
+            static get properties() {
+                return {
+                    date: {
+                        type: String,
+                        value: (new Date).toString(),
+                    },
+                }
+            }
+
+            constructor() {
+                super()
+
+                setInterval(() => {
+                    this.date = (new Date).toString()
+                }, 2000)
+            }
+        }
+
+        customElements.define('my-app', MyApp)
+    </script>
+</dom-module>

@@ -1,0 +1,20 @@
+{
+  "name": "polymer3-example",
+  "authors": [
+    "@liamfiddler"
+  ],
+  "description": "A simple Polymer 3 example.",
+  "main": "index.html",
+  "license": "BSD 3-Clause",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^2.0.2"
+  }
+}

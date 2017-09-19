@@ -20,7 +20,7 @@ export class MyApp extends Element {
 
   static get template() {
     return `
-      <style> div { color: red; } </style>
+      <style> div { color: yellow; } </style>
       <h1> 01 - Polymer 3 </h1>      
       <div> The time is [[date]] </div>
     `

@@ -22,7 +22,7 @@ export class MyApp extends Element {
 
   render() {
     render(html`
-      <style> div { color: red; } </style>
+      <style> div { color: bisque; } </style>
       <h1> 02 - Polymer 3 with lit-html </h1>
       <div> The time is ${this.date} </div>
     `, this)
