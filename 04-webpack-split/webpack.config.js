@@ -24,6 +24,10 @@ module.exports = {
                         ]
                     ]
                 }
+            },
+            {
+                test: /\.(html|css)$/,
+                use: 'raw-loader'
             }
         ]
     }

@@ -20,7 +20,7 @@ Then some dependencies were added, with the latest version of
 each package selected when prompted to choose:
 
 ```sh
-yarn add webpack babel-core babel-loader babel-preset-es2015 babel-preset-stage-2 --save-dev
+yarn add webpack babel-core babel-loader babel-preset-env --save-dev
 ```
 
 Then a `webpack.config.js` file was created

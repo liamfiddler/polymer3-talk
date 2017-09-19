@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Polymer 3</title>
+  </head>
+  <body>
+    <my-app></my-app>
+
+    <!--
+      Taken from https://github.com/webpack-contrib/polymer-webpack-loader/blob/0946e3c30994b2f5a71bd7c70dd8be60fb56c0ea/demo/src/index.ejs
+
+      Feature detect Custom Elements support. If the browser DOES support Custom
+      Elements then we need to load the custom-elements-es5-adapter because
+      our project code has been transpiled from ES2015 to ES5 and native Custom
+      Elements expect elements will be registered as classes.
+    -->
+    <div id="ce-es5-shim">
+      <script type="text/javascript">
+        if (!window.customElements) {
+          var ceShimContainer = document.querySelector('#ce-es5-shim');
+          ceShimContainer.parentElement.removeChild(ceShimContainer);
+        }
+      </script>
+      <script src="node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    </div>
+
+    <!--
+      Taken from https://github.com/webpack-contrib/polymer-webpack-loader/blob/0946e3c30994b2f5a71bd7c70dd8be60fb56c0ea/demo/src/index.ejs
+
+      Use the webcomponents-loader script which will feature detect which Web
+      Components features are missing and lazy load the appropriate polyfills.
+      When we hear the 'WebComponentsReady' event from the polyfill bundle we can
+      insert our 'bundle.js'.
+    -->
+    <script>
+      (function() {
+        document.addEventListener('WebComponentsReady', function componentsReady() {
+          document.removeEventListener('WebComponentsReady', componentsReady, false);
+          var script = document.createElement('script');
+          script.src = 'bundle.js';
+          var refScript = document.getElementsByTagName('script')[0];
+          refScript.parentNode.insertBefore(script, refScript);
+        }, false);
+      })();
+    </script>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  </body>
+</html>
