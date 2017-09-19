@@ -1,0 +1,40 @@
+{
+  "name": "polymer3-example",
+  "version": "1.0.0",
+  "description": "A simple Polymer 3 example using webpack.",
+  "main": "index.html",
+  "author": "@liamfiddler",
+  "license": "BSD 3-Clause",
+  "private": true,
+  "flat": true,
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0-pre.1",
+    "@webcomponents/webcomponentsjs": "^1.0.11",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^3.6.0"
+  },
+  "resolutions": {
+    "acorn": "5.1.2",
+    "ajv": "5.2.2",
+    "supports-color": "4.4.0",
+    "yargs": "8.0.2",
+    "inherits": "2.0.3",
+    "string_decoder": "1.0.3",
+    "minimist": "1.2.0",
+    "punycode": "1.4.1",
+    "hash-base": "3.0.4",
+    "camelcase": "4.1.0",
+    "cliui": "3.2.0",
+    "kind-of": "4.0.0",
+    "is-number": "3.0.0",
+    "string-width": "2.1.1",
+    "strip-ansi": "4.0.0",
+    "is-fullwidth-code-point": "2.0.0",
+    "ansi-regex": "3.0.0",
+    "assert-plus": "1.0.0",
+    "jsesc": "1.3.0"
+  }
+}
